@@ -13,21 +13,21 @@ export default class extends Component {
             <div className="row">
               <div className="col-xs-6">
                 <img src="https://static.pexels.com/photos/110854/pexels-photo-110854.jpeg"/>
-                <h2>Luna</h2>
+                <h2><a href="/campuses/1">Luna</a></h2>
               </div>
               <div className="col-xs-6">
                 <img src="https://static.pexels.com/photos/110854/pexels-photo-110854.jpeg"/>
-                <h2>Terra</h2>
+                <h2><a href="/campuses/2">Terra</a></h2>
               </div>
             </div>
             <div className="row justify-content-around">
               <div className="col-xs-6">
                 <img src="https://static.pexels.com/photos/110854/pexels-photo-110854.jpeg"/>
-                <h2>Mars</h2>
+                <h2><a href="/campuses/3">Mars</a></h2>
               </div>
               <div className="col-xs-6">
                 <img src="https://static.pexels.com/photos/110854/pexels-photo-110854.jpeg"/>
-                <h2>Titan</h2>
+                <h2><a href="/campuses/4">Titan</a></h2>
               </div>
             </div>
         </div>

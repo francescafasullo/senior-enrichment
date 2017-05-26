@@ -1,16 +1,20 @@
 const router = require('express').Router();
 const models = require('../../db/models');
+const Campus = models.Campus;
 
 router.get('/', function(req, res, next) {
 	res.render('index');
 })
 
 router.get('/campuses', function(req, res, next) {
-	//all campuses
+	Campus.findAll()
+	.then(campuses => res.json(campuses))
+	.catch(next);
+	})
 })
 
 router.get('/campuses/:campusId', function(req, res, next) {
-	//single campus
+	res.send('hello');
 })
 
 router.get('/students', function(req, res, next) {
@@ -44,3 +48,5 @@ router.delete('/campuses/:campusId', function(req, res, next) {
 router.delete('/students/:studentId', function(req, res, next) {
 	//delete student
 })
+
+module.exports = router;

@@ -8,5 +8,5 @@ import Main from './main';
 
 ReactDOM.render(
 	<Main />,
-	document.getElementById('app')
+	document.getElementById('main')
 	);
