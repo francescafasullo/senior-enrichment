@@ -1,8 +1,8 @@
 'use strict';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import AddStudent from '../components/AddStudent';
-import { addStudent, receiveStudents } from '../action-creators/students';
+import AddCampus from '../components/AddCampus';
+import { addCampus } from '../action-creators/campuses';
 
 const mapStateToProps = state => {
 	const students = state.students;
@@ -14,34 +14,29 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = (dispatch) => {
 	return {
-		addStudent(name, email, campus) {
-			dispatch(addStudent(name, email, campus));
-		},
-		receiveStudents() {
-			dispatch(receiveStudents());
+		addCampus(name, imageUrl) {
+			dispatch(addCampus(name, imageUrl));
 		}
 	};
 };
 
-class AddStudentContainer extends Component {
-
+class AddCampusContainer extends Component {
 	constructor(props) {
 		super(props);
 		this.handleSubmit = this.handleSubmit.bind(this);
 	}
 
-
 	handleSubmit(event) {
 		event.preventDefault();
-		const name = event.target.inputName.value;
-		const email = event.target.inputEmail.value;
-		const campus = event.target.campusSelect.value;
-		this.props.addStudent(name, email, campus);
+		const name = event.target.inputCampusName.value;
+		const imageUrl = event.target.inputCampusImageUrl.value;
+		console.log('props', this.props);
+		this.props.addCampus(name, imageUrl);
 	}
 
-	render() {
+	render () {
 		return (
-			<AddStudent
+			<AddCampus
 				{...this.state}
 				{...this.props}
 				handleSubmit={this.handleSubmit}
@@ -53,4 +48,4 @@ class AddStudentContainer extends Component {
 export default connect(
 	mapStateToProps,
 	mapDispatchToProps
-)(AddStudentContainer);
+)(AddCampusContainer);

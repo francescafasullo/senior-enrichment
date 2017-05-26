@@ -24,7 +24,7 @@ module.exports = app
 
   // notice the use of `_` as the first parameter above. This is a pattern for parameters that must exist, but you don't use or reference (or need) in the function body that follows.
 
-var validFrontendRoutes = ['/', '/campuses', '/campuses/:id', '/students', '/students/:id'];
+var validFrontendRoutes = ['/', '/campuses', '/campuses/:id', '/students', '/students/:id', '/addCampus', '/home', '/addStudent'];
 var indexPath = path.join(__dirname, '..', 'public', 'index.html');
 
 validFrontendRoutes.forEach(function (stateRoute) {

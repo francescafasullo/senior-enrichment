@@ -3,6 +3,7 @@ import Campuses from './Campuses';
 
 export default function AddStudent(props) {
 	const campuses = props.campuses;
+	const students = props.students;
 	const handleSubmit = props.handleSubmit;
 
 	return (

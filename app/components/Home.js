@@ -8,30 +8,11 @@ export default class extends Component {
 
   render(){
     return (
-      <div className="campuses">
-        <div className="container">
-            <div className="row">
-              <div className="col-xs-6">
-                <img src="https://static.pexels.com/photos/110854/pexels-photo-110854.jpeg"/>
-                <h2><a href="/campuses/1">Luna</a></h2>
-              </div>
-              <div className="col-xs-6">
-                <img src="https://static.pexels.com/photos/110854/pexels-photo-110854.jpeg"/>
-                <h2><a href="/campuses/2">Terra</a></h2>
-              </div>
-            </div>
-            <div className="row justify-content-around">
-              <div className="col-xs-6">
-                <img src="https://static.pexels.com/photos/110854/pexels-photo-110854.jpeg"/>
-                <h2><a href="/campuses/3">Mars</a></h2>
-              </div>
-              <div className="col-xs-6">
-                <img src="https://static.pexels.com/photos/110854/pexels-photo-110854.jpeg"/>
-                <h2><a href="/campuses/4">Titan</a></h2>
-              </div>
-            </div>
-        </div>
+      <div className="home-page container">
+      <h3>Welcome to Margaret Hamilton Interplanetary Academy of Javascript!</h3>
+      <p>Use this site to learn more about our wonderful campuses and students. The students tab will show you all the students who attend our university, and the campuses tab will show you all of our lovely campuses.</p>
       </div>
       )
   }
 }
+

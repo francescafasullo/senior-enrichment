@@ -1,6 +1,8 @@
 import {
   RECEIVE_CAMPUSES,
-  RECEIVE_CAMPUS
+  RECEIVE_CAMPUS,
+  CREATE_CAMPUS,
+  DELETE_CAMPUS
 } from '../constants';
 
 const initialCampusState = {
@@ -23,6 +25,15 @@ export default function (state = initialCampusState, action) {
 			newState.selected = action.campus;
 			newState.students = action.students;
 			break;
+
+		case CREATE_CAMPUS:
+			newState.list = action.campuses;
+			break;
+
+		case DELETE_CAMPUS:
+			newState.list = action.campuses.filter(campus => campus.id !== action.id);
+			break;
+
 
 		default:
 			return state;

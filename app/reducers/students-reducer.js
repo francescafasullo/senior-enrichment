@@ -29,8 +29,6 @@ export default function (state = initialStudentState, action) {
 			break;
 
 		case DELETE_STUDENT:
-			console.log('action.id', action.id);
-			console.log('action.students', action.students);
 			newState.list = action.students.filter(student => student.id !== action.id);
 			break;
 

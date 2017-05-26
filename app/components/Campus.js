@@ -2,8 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 
 const Campus = (props) => {
-  console.log('campus props', props);
-	
+
 	const campus = props.selected;
 	const students = props.students;
 
@@ -27,5 +26,3 @@ const Campus = (props) => {
  }
 
 export default Campus;
-//campus name
-//list of students 
